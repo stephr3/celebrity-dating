@@ -14,27 +14,35 @@ $(document).ready(function() {
     // var language = $("#language").val();
 
     if (gender && location && animal){
+      var result = "";
       if (gender === "Male" && location === "New York" && animal === "Yes") {
-        alert("Jake Gyllenhaal");
+        result = "Jake Gyllenhaal";
       } else if (gender === "Male" && location === "New York" && animal === "No") {
-        alert("Adam Sandler");
+        result = "Adam Sandler";
       } else if (gender === "Male" && location === "Los Angeles" && animal === "Yes") {
-        alert("Chris Pine");
+        result = "Chris Pine";
       } else if (gender === "Male" && location === "Los Angeles" && animal === "No") {
-        alert("Christian Bale");
+        result = "John Cho";
       } else if (gender === "Female" && location === "New York" && animal === "Yes") {
-        alert("Alicia Keys");
+        result = "Alicia Keys";
       } else if (gender === "Female" && location === "New York" && animal === "No") {
-        alert("Lindsay Lohan");
+        result = "Lindsay Lohan";
       } else if (gender === "Female" && location === "Los Angeles" && animal === "Yes") {
-        alert("Tyra Banks");
+        result = "Tyra Banks";
       } else if (gender === "Female" && location === "Los Angeles" && animal === "No") {
-        alert("Angelina Jolie");
+        result = "Angelina Jolie";
       }
-
+      $(".celebrityName").text(result);
+      $(".survey").hide();
+      $(".result").show();
     } else {
       alert("Please answer all the questions.");
     }
 
+  });
+  $(".result button").click(function(event) {
+    event.preventDefault();
+    $(".result").hide();
+    $(".survey").show();
   });
 });
