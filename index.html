@@ -15,14 +15,16 @@
         <form id="survey">
 
           <div class="form-group">
+            <label>Which gender do you prefer?</label>
             <select class="form-control" id="gender">
-              <option>""</option>
+              <option></option>
               <option>Male</option>
               <option>Female</option>
             </select>
           </div>
 
           <div class="form-group">
+            <label>Which height do you prefer?</label>
             <div class="radio">
               <label>
                 <input type="radio" name="height" value="short">
@@ -44,14 +46,16 @@
           </div>
 
           <div class="form-group">
+            <label>Which city would you like to date in?</label>
             <select class="form-control" id="location">
-              <option>""</option>
+              <option></option>
               <option>Los Angeles</option>
               <option>New York</option>
             </select>
           </div>
 
           <div class="form-group">
+            <label>Do you like animals?</label>
             <div class="radio">
               <label>
                 <input type="radio" name="animal" value="yes">
@@ -68,17 +72,22 @@
           </div>
 
           <div class="form-group">
-            <option>""</option>
-            <option>English</option>
-            <option>Spanish</option>
-            <option>Russian</option>
+            <label>Which language do you prefer?</label>
+            <select class="form-control" id="language">
+              <option></option>
+              <option>English</option>
+              <option>Spanish</option>
+              <option>Russian</option>
+            </select>
           </div>
-
+          <button type="submit" class="btn btn-danger">Submit</button>
         </form>
       </div>
 
-      <div class="results">
-
+      <div class="result">
+        <h2>Your celebrity dating match is...</h2>
+        <h1><span class="celebrityName"></span></h1>
+        <h4>Have fun on your date!</h4>
       </div>
 
     </div>
